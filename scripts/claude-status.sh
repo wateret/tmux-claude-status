@@ -17,6 +17,7 @@ get_tmux_option() {
 }
 
 CLAUDE_STATUS_ICON="$(get_tmux_option "@claude_status_icon" "C")"
+CLAUDE_STATUS_SPACE="$(get_tmux_option "@claude_status_space" " ")"
 
 CLAUDE_STATUS_CACHE_FILE="$(get_tmux_option "@claude_status_cache_file" "/tmp/tmux-claude-status-${USER}")"
 CLAUDE_STATUS_CACHE_TTL="$(get_tmux_option "@claude_status_cache_ttl" "5")"
@@ -107,6 +108,6 @@ if [ -f "$CLAUDE_STATUS_CACHE_FILE" ]; then
     fi
   done <"$CLAUDE_STATUS_CACHE_FILE"
   if [ -n "$output" ]; then
-    printf ' %s#[fg=default]' "$output"
+    printf '%s%s#[fg=default]' "$CLAUDE_STATUS_SPACE" "$output"
   fi
 fi

@@ -35,8 +35,8 @@ git clone https://github.com/wateret/tmux-claude-status ~/.tmux/plugins/tmux-cla
 Add `#{claude_status}` to your `window-status-format` in `tmux.conf`:
 
 ```
-set -g window-status-format "... #{claude_status} "
-set -g window-status-current-format "... #{claude_status} "
+set -g window-status-format "... #{claude_status} ..."
+set -g window-status-current-format "... #{claude_status} ..."
 ```
 
 The plugin replaces `#{claude_status}` with the actual status call on load.
@@ -44,8 +44,8 @@ The plugin replaces `#{claude_status}` with the actual status call on load.
 If your terminal uses a [Nerd Font](https://www.nerdfonts.com/), add this alongside your format strings:
 
 ```
-set -g window-status-format "... #{claude_status} "
-set -g window-status-current-format "... #{claude_status} "
+set -g window-status-format "... #{claude_status} ..."
+set -g window-status-current-format "... #{claude_status} ..."
 
 set -g @claude_status_icon '●' # Choose an icon you like
 ```
@@ -57,6 +57,7 @@ All options are set via `set -g` in `tmux.conf`:
 | Option | Default | Description |
 |--------|---------|-------------|
 | `@claude_status_icon` | `C` | Icon to display |
+| `@claude_status_space` | ` ` | Leading space before icons (set to `''` to disable) |
 | `@claude_status_color_busy` | `#ff79c6` | Color when busy |
 | `@claude_status_color_waiting` | `#f1fa8c` | Color when waiting for input |
 | `@claude_status_color_shell` | `#bd93f9` | Color when running shell command |
