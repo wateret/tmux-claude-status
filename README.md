@@ -46,7 +46,8 @@ If your terminal uses a [Nerd Font](https://www.nerdfonts.com/), add this alongs
 ```
 set -g window-status-format "... #{claude_status} "
 set -g window-status-current-format "... #{claude_status} "
-set -g @claude_status_icon ● # Choose an icon you like
+
+set -g @claude_status_icon '●' # Choose an icon you like
 ```
 
 ## Configuration
