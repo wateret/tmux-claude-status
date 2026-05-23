@@ -6,7 +6,7 @@
 CURRENT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SCRIPT="$CURRENT_DIR/scripts/claude-status.sh"
 PLACEHOLDER="#{claude_status}"
-CALL="#(\$CURRENT_DIR/scripts/claude-status.sh '#{session_name}:#{window_index}')"
+CALL="#($CURRENT_DIR/scripts/claude-status.sh '#{session_name}:#{window_index}')"
 
 replace_placeholder() {
   local option="$1"

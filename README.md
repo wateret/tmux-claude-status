@@ -8,10 +8,10 @@ Shows a colored Claude Code icon in the tmux status bar for each window running 
 
 | Color | State |
 |-------|-------|
-| Pink | busy |
-| Purple | running shell command |
-| Yellow | waiting for input |
-| Blue/dim | idle |
+| Pink | `busy` |
+| Purple | `shell` - running command background |
+| Yellow | `waiting` for input |
+| Blue/dim | `idle` |
 
 ## Install
 
