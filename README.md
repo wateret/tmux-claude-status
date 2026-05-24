@@ -17,7 +17,9 @@ Shows a colored Claude Code icon in the tmux status bar for each window running 
 
 **Via [TPM](https://github.com/tmux-plugins/tpm):**
 
-```
+Add to `tmux.conf`:
+
+```tmux
 set -g @plugin 'wateret/tmux-claude-status'
 ```
 
@@ -26,15 +28,20 @@ Then press `prefix + I` to install.
 **Manual:**
 
 ```bash
-git clone https://github.com/wateret/tmux-claude-status ~/.tmux/plugins/tmux-claude-status
-~/.tmux/plugins/tmux-claude-status/tmux-claude-status.tmux
+git clone https://github.com/wateret/tmux-claude-status ~/.config/tmux/plugins/tmux-claude-status
+```
+
+Add to `tmux.conf`:
+
+```tmux
+run-shell ~/.config/tmux/plugins/tmux-claude-status/tmux-claude-status.tmux
 ```
 
 ## Usage
 
 Add `#{claude_status}` to your `window-status-format` in `tmux.conf`:
 
-```
+```tmux
 set -g window-status-format "... #{claude_status} ..."
 set -g window-status-current-format "... #{claude_status} ..."
 ```
@@ -43,7 +50,7 @@ The plugin replaces `#{claude_status}` with the actual status call on load.
 
 If your terminal uses a [Nerd Font](https://www.nerdfonts.com/), add this alongside your format strings:
 
-```
+```tmux
 set -g window-status-format "... #{claude_status} ..."
 set -g window-status-current-format "... #{claude_status} ..."
 
